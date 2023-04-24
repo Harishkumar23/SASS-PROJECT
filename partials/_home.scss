@@ -1,0 +1,537 @@
+// Banner area
+.banner__sec {
+    @include gradientBackground;
+    margin-top: 0px;
+    padding-top: 100px;
+
+    .banner_content {
+        .ban__title {
+            font-size: 42px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: $white-color;
+        }
+        .main_content {
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 30px;
+            color: $white-color;
+        }
+    }
+    .header__image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .bannerimg {
+            width: 450px;
+        }
+    }
+}
+
+// services area
+.service__sec {
+    padding: 30px 0;
+    margin-top: 0px;
+    background: $body-color;
+
+    .sec__title {
+        text-align: center;
+        font-size: 28px;
+        color: #000;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+    .sec__blacktext {
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .sec_cardgrid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+
+        .sec_card {
+            @include gradientBackground;
+            display: flex;
+            padding: 20px;
+            border-radius: 10px;
+            gap: 20px;
+            height: fit-content;
+            transition: all 400ms ease;
+            
+            &:hover {
+                margin-top: -10px;
+            }
+            .sec__cardicon {
+                font-size: 20px;
+            }
+            .card_whitehd {
+                font-size: 18px;
+                margin-bottom: 15px;
+            }
+            .card_whitetest {
+                font-size: 16px;
+                margin-bottom: 0px;
+            }
+        }
+    }
+}
+
+// specialists area
+.special_row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    .spl_doccard {
+        background: $white-color;
+        border-radius: 10px;
+        box-shadow: 0 1.5rem 1.5rem rgba($black-color, 0.1);
+        position: relative;
+        transition: all 700ms ease;
+
+        &:hover {
+            border: 1px solid #4cc9f0;
+
+            .doc_img::before {
+                left: 0;
+                border-radius: 1rem;
+            }
+            .spl_social, .spl_whatsapp {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        
+        .doc_img {
+            height: 25rem;
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+
+            &::before {
+                content: "";
+                display: block;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: -100%;
+                background: linear-gradient(135deg,
+                    rgba($primary-color, 0.8),
+                    rgba($primary-color-variant, 0.8));
+                 border-radius: 50%;
+                 transition: all 1s ease;
+            }
+        }
+        
+        .spl_doc_content {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .spl_social {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 1s 400ms ease;
+
+            .social_icon {
+                background: $white-color;
+                color: $primary-color;
+                padding: 0.4rem;
+                display: flex;
+                font-size: 0.8rem;
+                border-radius: 50%;
+                transition: all 400ms ease;
+                text-decoration: none;
+
+                &:hover {
+                    background: $primary-color;
+                    color: $white-color;
+                }
+            }
+        }
+
+        .spl_whatsapp {
+            background: $success-color;
+            color: $white-color;
+            position: absolute;
+            left: 50%;
+            bottom: 30%;
+            transform: translateX(-50%);
+            padding: 1rem;
+            border-radius: 50%;
+            display: flex;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 1s 400ms ease;
+            text-decoration: none;
+        }
+    }
+}
+
+// Patients area
+.patient_row, .swiper-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+
+    .pat_card, .swiper-slide {
+        @include gradientBackground;
+        padding: 20px;
+        border-radius: 10px;
+        cursor: default;
+        width: 350px !important;
+
+        .card_whitetest {
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .pat_cardflex {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+            .pat_avatimg {
+                width: 50px;
+                height: 50px;
+                aspect-ratio: 1/1;
+                overflow: hidden;
+                border-radius: 50%;
+            }
+            .pat_name {
+                font-size: 16px;
+                font-weight: 500;
+                margin-bottom: 4px;
+            }
+            .pat_place {
+                font-size: 12px;
+                font-weight: 400;
+                margin-bottom: 0px;
+            }
+        }
+    }
+}
+
+// Appointment form area
+.apt_info {
+    .aptform__title {
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 10px;
+        color: $black-color;
+    }
+    .sec__blacktext {
+        font-size: 16px;
+        font-weight: 500;
+        color: #545454;
+        margin-bottom: 25px;
+        text-align: left;
+    }
+    .apt_secshow{
+        .apt_features {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+
+            .info_icon {
+                height: fit-content;
+                border-radius: 50%;
+                background: $secondary-color;
+                color: $white-color;
+                padding: 10px;
+                font-size: 17px;
+                display: flex;
+                flex-direction: column;
+            }
+            .apt_ftitle {
+                font-size: 18px;
+                font-weight: 600;
+                color: $black-color;
+            }
+            .apt_ftxt {
+                font-size: 14px;
+                color: #545454;
+                margin-bottom: 0px;
+            }
+        }
+    }
+}
+
+.apt__forminfo {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+
+    .form_group {
+        margin-bottom: 10px;
+
+        .form_label {
+            font-size: 12px;
+            font-weight: 500;
+            display: inline-block;
+            margin-bottom: 6px;
+        }
+        .apt_control {
+            background: $white-color;
+            display: block;
+            padding: 10px 20px;
+            border-radius: 5px;
+            width: 100%;
+            resize: none;
+            // appearance: none;
+        }
+    }
+    .apt_submit {
+        width: 200px;
+        height: 45px;
+        border-radius: 5px;
+        font-size: 17px;
+        font-weight: 500;
+        @include gradientBackground;
+    }
+}
+
+
+
+
+/*========= Media Queries (Medium Devices) ==========*/
+@media screen and (max-width:1024px) {
+    // Banner area
+    .banner__sec {
+        text-align: center;
+
+        .banner_content {
+            .ban__title {
+                font-size: 22px;
+            }
+            .main_content {
+                font-size: 12px;
+            }
+        }
+        .header__image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    
+            .bannerimg {
+                width: 300px;
+            }
+        }
+    }
+    // services area
+    .service__sec {
+        .sec__title {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .sec__blacktext {
+            font-size: 14px;
+        }
+        .sec_cardgrid {
+            gap: 10px;
+
+            .sec_card {
+                gap: 10px;
+
+                &:hover {
+                    margin: 0;
+                }
+                .sec_card {
+                    gap: 10px;
+                }
+                .sec__cardicon {
+                    font-size: 15px;
+                }
+                .card_whitehd {
+                    font-size: 16px;
+                }
+                .card_whitetest {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    // specialists area
+    .special_row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+    // Patients area
+    .patient_row, .swiper-wrapper {
+        .pat_card, .swiper-slide {
+            width: 325px !important;
+
+            .pat_cardflex {
+                .pat_name {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    // Appointment form area
+    .apt_info {
+        .aptform__title {
+            font-size: 16px;
+        }
+        .sec__blacktext {
+            font-size: 14px;
+        }
+        .apt_secshow {
+            .apt_features {
+                gap: 15px;
+    
+                .info_icon {
+                    font-size: 16px;
+                }
+                .apt_ftitle {
+                    font-size: 16px;
+                }
+                .apt_ftxt {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+    .apt__forminfo {
+        .apt_submit {
+            width: 180px;
+            height: 40px;
+            font-size: 14px;
+        }
+    }
+}
+
+
+/*========= Media Queries (Small Devices) ==========*/
+@media screen and (max-width:600px) {
+    // Banner area
+    .banner__sec {
+        text-align: center;
+
+        .banner_content {
+            .ban__title {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+            .main_content {
+                font-size: 12px;
+            }
+        }
+        .header__image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    
+            .bannerimg {
+                width: 300px;
+            }
+        }
+    }
+    // services area
+    .service__sec {
+        .sec__title {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .sec__blacktext {
+            font-size: 12px;
+        }
+        .sec_cardgrid {
+            gap: 10px;
+            grid-template-columns: 1fr;
+
+            .sec_card {
+                gap: 10px;
+
+                &:hover {
+                    margin: 0;
+                }
+                .sec_card {
+                    gap: 10px;
+                }
+                .sec__cardicon {
+                    font-size: 15px;
+                }
+                .card_whitehd {
+                    font-size: 14px;
+                    margin-bottom: 10px;
+                }
+                .card_whitetest {
+                    font-size: 12px;
+                }
+            }
+
+            
+        }
+    }
+    // specialists area
+    .special_row {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        width: 270px;
+        margin: 0px auto;
+
+        .spl_doccard 
+            .doc_img {
+            height: 25rem;
+        }
+    }
+    // Patients area
+    .patient_row, .swiper-wrapper {
+        .pat_card, .swiper-slide {
+            width: 100% !important;
+
+            .pat_cardflex {
+                .pat_name {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    // Appointment form area
+    .apt_info {
+        .aptform__title {
+            font-size: 16px;
+            text-align: center;
+        }
+        .sec__blacktext {
+            font-size: 12px;
+            text-align: center;
+        }
+        .apt_secshow {
+            .apt_features {
+                gap: 15px;
+    
+                .info_icon {
+                    font-size: 14px;
+                }
+                .apt_ftitle {
+                    font-size: 16px;
+                }
+                .apt_ftxt {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    .apt__forminfo {
+        .apt_submit {
+            width: 100%;
+            height: 40px;
+            font-size: 14px;
+        }
+    }
+}

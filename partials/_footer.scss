@@ -1,0 +1,163 @@
+.footer_sec {
+    background: $black-color;
+    padding: 40px 0;
+
+    .footercol_show {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+
+        .footer_cols {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            color: #ffffffb5;
+
+            .footmain_title {
+                font-size: 20px;
+                font-weight: 700;
+                color: $white-color;
+            }
+            .footcol_txt {
+                font-size: 16px;
+                color: #ffffffb5;
+            }
+            .fsupport {
+                font-size: 16px;
+            }
+            .footcol_title {
+                font-size: 20px;
+                font-weight: 600;
+                color: $white-color;
+            }
+            .foot_links {
+                color: #ffffffb5;
+                font-size: 14px;
+            }
+            .foot_submit {
+                @include gradientBackground;
+                width: 200px;
+                height: 45px;
+                border-radius: 5px;
+                font-size: 16px;
+            }
+            .social_footer {
+                display: flex;
+                gap: 20px;
+                
+                .foot_links {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    .copyright {
+        text-align: center;
+        border-top: 1px solid rgba($white-color, 0.2);
+        padding: 20px 0;
+        margin-top: 40px;
+        font-size: 16px;
+        color: #ffffffb5;
+    }
+}
+
+
+/*========= Media Queries (Medium Devices) ==========*/
+@media screen and (max-width:1024px) {
+    .footer_sec {
+
+        .footercol_show {
+            gap: 25px;
+            grid-template-columns: 1fr 1fr;
+
+            .footer_cols {
+                gap: 10px;
+
+                .footmain_title {
+                    font-size: 20px;
+                }
+                .footcol_txt {
+                    font-size: 12px;
+                }
+                .fsupport {
+                    font-size: 12px;
+                }
+                .footcol_title {
+                    font-size: 16px;
+                }
+                .foot_links {
+                    font-size: 12px;
+                }
+                .foot_submit {
+                    width: 200px;
+                    height: 40px;
+                    font-size: 14px;
+                }
+                .social_footer {
+                    display: flex;
+                    gap: 20px;
+                    
+                    .foot_links {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        .copyright {
+            padding: 20px 0 0 0;
+            margin-top: 20px;
+            font-size: 12px;
+        }
+    }
+}
+
+
+
+/*========= Media Queries (Small Devices) ==========*/
+@media screen and (max-width:600px) {
+    .footer_sec {
+
+        .footercol_show {
+            gap: 25px;
+            grid-template-columns: 1fr;
+
+            .footer_cols {
+                gap: 10px;
+
+                .footmain_title {
+                    font-size: 20px;
+                }
+                .footcol_txt {
+                    font-size: 12px;
+                }
+                .fsupport {
+                    font-size: 12px;
+                }
+                .footcol_title {
+                    font-size: 16px;
+                }
+                .foot_links {
+                    font-size: 12px;
+                }
+                .foot_submit {
+                    width: 200px;
+                    height: 40px;
+                    font-size: 14px;
+                }
+                .social_footer {
+                    display: flex;
+                    gap: 20px;
+                    
+                    .foot_links {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        .copyright {
+            padding: 20px 0 0 0;
+            margin-top: 20px;
+            font-size: 12px;
+        }
+    }
+}
